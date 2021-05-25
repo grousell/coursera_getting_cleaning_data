@@ -90,6 +90,9 @@ tidy_df <- df_mean_sd %>%
   group_by (activity_label, subject) %>% 
   summarise_all (mean, na.rm = TRUE)
 
+write.table(tidy_df, 
+            file = "tidy_df.txt",
+            row.names = FALSE) 
 
 
 
